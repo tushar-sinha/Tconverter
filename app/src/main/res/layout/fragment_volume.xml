@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.tushar.admin.tconverter.AreaFragment">
+    tools:context=".VolumeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -49,13 +49,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Kilometer Square"
+                        android:hint="Cubic Meter"
                         android:inputType="numberDecimal"
                         android:maxLength="15"
                         android:selectAllOnFocus="true"
                         android:textColor="#3f51b5" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
+
 
             <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/card_view2"
@@ -70,7 +71,7 @@
                 <LinearLayout
                     android:id="@+id/layout2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="50dp">
 
                     <TextView
                         android:id="@+id/txt2"
@@ -85,9 +86,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Hectare"
+                        android:hint="Litre"
                         android:inputType="numberDecimal"
-                        android:maxLength="20"
+                        android:maxLength="15"
                         android:selectAllOnFocus="true"
                         android:textColor="#3f51b5" />
                 </LinearLayout>
@@ -121,9 +122,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Meter Square"
+                        android:hint="Cubic Feet"
                         android:inputType="numberDecimal"
-                        android:maxLength="20"
+                        android:maxLength="15"
                         android:selectAllOnFocus="true"
                         android:textColor="#3f51b5" />
                 </LinearLayout>
@@ -142,7 +143,8 @@
                 <LinearLayout
                     android:id="@+id/layout4"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp">
+                    android:layout_height="50dp"
+                    android:layout_below="@id/layout3">
 
                     <TextView
                         android:id="@+id/txt4"
@@ -157,153 +159,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Mile Square"
+                        android:hint="Gallon"
                         android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:selectAllOnFocus="true"
-                        android:textColor="#3f51b5" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view5"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/card_view4"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/layout5"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:id="@+id/txt5"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="#3f51b5"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/edit5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Acre"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:selectAllOnFocus="true"
-                        android:textColor="#3f51b5" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view6"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/card_view5"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/layout6"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:id="@+id/txt6"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="#3f51b5"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/edit6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Yard Square"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:selectAllOnFocus="true"
-                        android:textColor="#3f51b5" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view7"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/card_view6"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/layout7"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:id="@+id/txt7"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="#3f51b5"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/edit7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Foot Square"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:selectAllOnFocus="true"
-                        android:textColor="#3f51b5" />
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/card_view8"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_below="@id/card_view7"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                card_view:cardCornerRadius="2dp"
-                card_view:cardElevation="5dp">
-
-                <LinearLayout
-                    android:id="@+id/layout8"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:id="@+id/txt8"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="5dp"
-                        android:textColor="#3f51b5"
-                        android:textSize="20dp" />
-
-                    <EditText
-                        android:id="@+id/edit8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:hint="Inch Square"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
+                        android:maxLength="15"
                         android:selectAllOnFocus="true"
                         android:textColor="#3f51b5" />
                 </LinearLayout>

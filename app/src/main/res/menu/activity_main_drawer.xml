@@ -5,15 +5,14 @@
         <item
             android:id="@+id/nav_acc"
             android:icon="@drawable/acc"
-            android:textColor="#fff"
             android:title="Acceleration" />
         <item
             android:id="@+id/nav_area"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/hatching"
             android:title="Area" />
         <item
             android:id="@+id/nav_cur"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/dollar"
             android:title="Currency" />
         <item
             android:id="@+id/nav_dig"
@@ -21,59 +20,55 @@
             android:title="Digital Storage" />
         <item
             android:id="@+id/nav_ene"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/energy"
             android:title="Energy" />
         <item
             android:id="@+id/nav_for"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/force"
             android:title="Force" />
         <item
             android:id="@+id/nav_fuel"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/fuel"
             android:title="Fuel Consumption" />
         <item
             android:id="@+id/nav_len"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/length"
             android:title="Length" />
         <item
             android:id="@+id/nav_mas"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/mass"
             android:title="Mass" />
         <item
             android:id="@+id/nav_num"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/num"
             android:title="Numeral Systems" />
         <item
             android:id="@+id/nav_pow"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/power"
             android:title="Power" />
         <item
             android:id="@+id/nav_pre"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/pressure"
             android:title="Pressure" />
         <item
             android:id="@+id/nav_sho"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/shoe"
             android:title="Shoe Size" />
         <item
             android:id="@+id/nav_spe"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/speed"
             android:title="Speed" />
         <item
             android:id="@+id/nav_tem"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/temperature"
             android:title="Temperature" />
         <item
             android:id="@+id/nav_tim"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/time"
             android:title="Time" />
         <item
-            android:id="@+id/nav_tor"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Torque" />
-        <item
             android:id="@+id/nav_vol"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/volume"
             android:title="Volume" />
     </group>
 </menu>

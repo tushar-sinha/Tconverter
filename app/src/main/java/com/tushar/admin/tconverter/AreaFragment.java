@@ -1,9 +1,9 @@
 package com.tushar.admin.tconverter;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.text.Editable;
 import android.text.Html;
 import android.text.TextWatcher;
@@ -12,7 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -22,191 +21,6 @@ import android.widget.TextView;
 public class AreaFragment extends Fragment {
     TextView tv1, tv2, tv3, tv4, tv5, tv6, tv7,tv8;
     EditText et1, et2, et3, et4, et5, et6, et7, et8;
-    LinearLayout l1,l2,l3,l4, l5, l6, l7, l8;
-
-    public AreaFragment() {
-        // Required empty public constructor
-    }
-
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View fragView =inflater.inflate(R.layout.fragment_area, container, false);
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Area");
-        l1 = (LinearLayout)fragView.findViewById(R.id.layout1);
-        l2 = (LinearLayout)fragView.findViewById(R.id.layout2);
-        l3 = (LinearLayout)fragView.findViewById(R.id.layout3);
-        l4 = (LinearLayout)fragView.findViewById(R.id.layout4);
-        l5 = (LinearLayout)fragView.findViewById(R.id.layout5);
-        l6 = (LinearLayout)fragView.findViewById(R.id.layout6);
-        l7 = (LinearLayout)fragView.findViewById(R.id.layout7);
-        l8 = (LinearLayout)fragView.findViewById(R.id.layout8);
-        tv1 = (TextView) fragView.findViewById(R.id.txt1);
-        tv2 = ((TextView) fragView.findViewById(R.id.txt2));
-        tv3 = (TextView) fragView.findViewById(R.id.txt3);
-        tv4 = (TextView) fragView.findViewById(R.id.txt4);
-        tv5 = (TextView) fragView.findViewById(R.id.txt5);
-        tv6 = (TextView) fragView.findViewById(R.id.txt6);
-        tv7 = (TextView) fragView.findViewById(R.id.txt7);
-        tv8 = (TextView) fragView.findViewById(R.id.txt8);
-        tv1.setText(Html.fromHtml("km<sup><small>2</small></sup>"));
-        tv2.setText(Html.fromHtml("ha"));
-        tv3.setText(Html.fromHtml("m<sup><small>2</small></sup>"));
-        tv4.setText(Html.fromHtml("mile<sup><small>2</small></sup>"));
-        tv5.setText(Html.fromHtml("acre"));
-        tv6.setText(Html.fromHtml("yd<sup><small>2</small></sup>"));
-        tv7.setText(Html.fromHtml("ft<sup><small>2</small></sup>"));
-        tv8.setText(Html.fromHtml("in<sup><small>2</small></sup>"));
-        l1.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l2.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l3.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l4.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l5.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l6.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l7.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        l8.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
-        et1 = (EditText) fragView.findViewById(R.id.edit1);
-        et2 = (EditText) fragView.findViewById(R.id.edit2);
-        et3 = (EditText) fragView.findViewById(R.id.edit3);
-        et4 = (EditText) fragView.findViewById(R.id.edit4);
-        et5 = (EditText) fragView.findViewById(R.id.edit5);
-        et6 = (EditText) fragView.findViewById(R.id.edit6);
-        et7 = (EditText) fragView.findViewById(R.id.edit7);
-        et8 = (EditText) fragView.findViewById(R.id.edit8);
-        et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et1.addTextChangedListener(myTextWatcher);
-                }
-            }
-        });
-        et2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et2.addTextChangedListener(myTextWatcher1);
-                }
-            }
-        });
-        et3.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et3.addTextChangedListener(myTextWatcher2);
-                }
-            }
-        });
-        et4.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et4.addTextChangedListener(myTextWatcher3);
-                }
-            }
-        });
-        et5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et5.addTextChangedListener(myTextWatcher4);
-                }
-            }
-        });
-        et6.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et6.addTextChangedListener(myTextWatcher5);
-                }
-            }
-        });
-        et7.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et8.removeTextChangedListener(myTextWatcher7);
-                    et7.addTextChangedListener(myTextWatcher6);
-                }
-            }
-        });
-        et8.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    et1.removeTextChangedListener(myTextWatcher);
-                    et2.removeTextChangedListener(myTextWatcher1);
-                    et3.removeTextChangedListener(myTextWatcher2);
-                    et4.removeTextChangedListener(myTextWatcher3);
-                    et5.removeTextChangedListener(myTextWatcher4);
-                    et6.removeTextChangedListener(myTextWatcher5);
-                    et7.removeTextChangedListener(myTextWatcher6);
-                    et8.addTextChangedListener(myTextWatcher7);
-                }
-            }
-        });
-
-
-        return fragView;
-    }
     protected TextWatcher myTextWatcher = new TextWatcher() {
         //bug-app crashes on starting with decimal.
         @Override
@@ -470,4 +284,191 @@ public class AreaFragment extends Fragment {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) { }
     };
+    CardView l1, l2, l3, l4, l5, l6, l7, l8;
+
+    public AreaFragment() {
+        // Required empty public constructor
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View fragView = inflater.inflate(R.layout.fragment_area, container, false);
+        //((AppCompatActivity) getActivity()).getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#0d47a1")));
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Area");
+        l1 = (CardView) fragView.findViewById(R.id.card_view1);
+        l2 = (CardView) fragView.findViewById(R.id.card_view2);
+        l3 = (CardView) fragView.findViewById(R.id.card_view3);
+        l4 = (CardView) fragView.findViewById(R.id.card_view4);
+        l5 = (CardView) fragView.findViewById(R.id.card_view5);
+        l6 = (CardView) fragView.findViewById(R.id.card_view6);
+        l7 = (CardView) fragView.findViewById(R.id.card_view7);
+        l8 = (CardView) fragView.findViewById(R.id.card_view8);
+        tv1 = (TextView) fragView.findViewById(R.id.txt1);
+        tv2 = ((TextView) fragView.findViewById(R.id.txt2));
+        tv3 = (TextView) fragView.findViewById(R.id.txt3);
+        tv4 = (TextView) fragView.findViewById(R.id.txt4);
+        tv5 = (TextView) fragView.findViewById(R.id.txt5);
+        tv6 = (TextView) fragView.findViewById(R.id.txt6);
+        tv7 = (TextView) fragView.findViewById(R.id.txt7);
+        tv8 = (TextView) fragView.findViewById(R.id.txt8);
+        tv1.setText(Html.fromHtml("km<sup><small>2</small></sup>"));
+        tv2.setText(Html.fromHtml("ha"));
+        tv3.setText(Html.fromHtml("m<sup><small>2</small></sup>"));
+        tv4.setText(Html.fromHtml("mile<sup><small>2</small></sup>"));
+        tv5.setText(Html.fromHtml("acre"));
+        tv6.setText(Html.fromHtml("yd<sup><small>2</small></sup>"));
+        tv7.setText(Html.fromHtml("ft<sup><small>2</small></sup>"));
+        tv8.setText(Html.fromHtml("in<sup><small>2</small></sup>"));
+
+        l1.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l2.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l3.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l4.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l5.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l6.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l7.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+        l8.startAnimation(AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left));
+
+        et1 = (EditText) fragView.findViewById(R.id.edit1);
+        et2 = (EditText) fragView.findViewById(R.id.edit2);
+        et3 = (EditText) fragView.findViewById(R.id.edit3);
+        et4 = (EditText) fragView.findViewById(R.id.edit4);
+        et5 = (EditText) fragView.findViewById(R.id.edit5);
+        et6 = (EditText) fragView.findViewById(R.id.edit6);
+        et7 = (EditText) fragView.findViewById(R.id.edit7);
+        et8 = (EditText) fragView.findViewById(R.id.edit8);
+        et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et1.addTextChangedListener(myTextWatcher);
+                }
+            }
+        });
+        et2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et2.addTextChangedListener(myTextWatcher1);
+                }
+            }
+        });
+        et3.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et3.addTextChangedListener(myTextWatcher2);
+                }
+            }
+        });
+        et4.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et4.addTextChangedListener(myTextWatcher3);
+                }
+            }
+        });
+        et5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et5.addTextChangedListener(myTextWatcher4);
+                }
+            }
+        });
+        et6.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et6.addTextChangedListener(myTextWatcher5);
+                }
+            }
+        });
+        et7.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et8.removeTextChangedListener(myTextWatcher7);
+                    et7.addTextChangedListener(myTextWatcher6);
+                }
+            }
+        });
+        et8.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus) {
+                    et1.removeTextChangedListener(myTextWatcher);
+                    et2.removeTextChangedListener(myTextWatcher1);
+                    et3.removeTextChangedListener(myTextWatcher2);
+                    et4.removeTextChangedListener(myTextWatcher3);
+                    et5.removeTextChangedListener(myTextWatcher4);
+                    et6.removeTextChangedListener(myTextWatcher5);
+                    et7.removeTextChangedListener(myTextWatcher6);
+                    et8.addTextChangedListener(myTextWatcher7);
+                }
+            }
+        });
+
+
+        return fragView;
+    }
 }

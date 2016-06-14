@@ -1,175 +1,242 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="52dp"
+    android:background="#ccc"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:layout_marginTop="52dp"
-    android:background="#000"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.tushar.admin.tconverter.PowerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout1">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:paddingLeft="5dp"
-                    android:textSize="20dp"
-                    android:id="@+id/txt1"/>
-                <EditText
+                android:layout_gravity="center"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit1"
-                    android:hint="Megawatt"
-                    android:textColor="#fff"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="MegaWatt"
+                        android:inputType="numberDecimal"
+                        android:maxLength="15"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/layout1"
+                android:layout_below="@id/card_view1"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout2">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:paddingLeft="5dp"
-                    android:textSize="20dp"
-                    android:id="@+id/txt2"/>
-                <EditText
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit2"
-                    android:hint="Kilowatt"
-                    android:textColor="#fff"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txt2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="KiloWatt"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/layout2"
+                android:layout_below="@id/card_view2"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout3">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:paddingLeft="5dp"
-                    android:textSize="20dp"
-                    android:id="@+id/txt3"/>
-                <EditText
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout3"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit3"
-                    android:hint="watt"
-                    android:textColor="#fff"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txt3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Watt"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/layout3"
+                android:layout_below="@id/card_view3"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout4">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:textSize="20dp"
-                    android:paddingLeft="5dp"
-                    android:id="@+id/txt4"/>
-                <EditText
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout4"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit4"
-                    android:textColor="#fff"
-                    android:hint="milliwatt"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txt4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="milliWatt"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view5"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/layout4"
+                android:layout_below="@id/card_view4"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout5">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:paddingLeft="5dp"
-                    android:textSize="20dp"
-                    android:id="@+id/txt5"/>
-                <EditText
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit5"
-                    android:hint="Metric Horsepower"
-                    android:textColor="#fff"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
-            <LinearLayout
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txt5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Metric HorsePower"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view6"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@id/layout5"
+                android:layout_below="@id/card_view5"
+                android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/layout_back1"
-                android:id="@+id/layout6">
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:textColor="#fff"
-                    android:paddingLeft="5dp"
-                    android:textSize="20dp"
-                    android:id="@+id/txt6"/>
-                <EditText
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="5dp">
+
+                <LinearLayout
+                    android:id="@+id/layout6"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/edit6"
-                    android:hint="UK Horsepower"
-                    android:textColor="#fff"
-                    android:selectAllOnFocus="true"
-                    android:inputType="numberDecimal"
-                    android:ems="10"
-                    android:maxLength="15"/>
-            </LinearLayout>
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/txt6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:textColor="#3f51b5"
+                        android:textSize="20dp" />
+
+                    <EditText
+                        android:id="@+id/edit6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="UK HorsePower"
+                        android:inputType="numberDecimal"
+                        android:maxLength="20"
+                        android:selectAllOnFocus="true"
+                        android:textColor="#3f51b5" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
 
         </RelativeLayout>
     </ScrollView>
-
 </FrameLayout>
